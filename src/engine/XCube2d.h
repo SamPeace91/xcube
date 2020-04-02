@@ -11,6 +11,7 @@
 #include "PhysicsEngine.h"
 #include "ResourceManager.h"
 #include "Timer.h"
+#include "MenuUI.h"
 
 #include <SDL.h>
 #include <SDL_image.h>

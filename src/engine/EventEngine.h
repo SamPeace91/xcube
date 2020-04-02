@@ -37,10 +37,8 @@ class EventEngine {
 		void pollEvents();
 		
 		bool isPressed(Key);
-		bool isPressed(Mouse);
-		bool wasPressed(Mouse);
-		bool isHovering(Mouse);
-		bool wasHovering(Mouse);
+		bool isPressed(Mouse); //Detect mouse click.
+		bool isHovering(Mouse); //Detect mouse hover.
     
         /**
          * Software emulation of keypresses

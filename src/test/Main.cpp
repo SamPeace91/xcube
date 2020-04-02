@@ -1,5 +1,4 @@
 #include "TestGame.h"
-#include "C:\Users\skyro\Desktop\xcube\build/MenuUI.h"
 
 int main(int argc, char * args[]) {
 

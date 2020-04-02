@@ -59,19 +59,11 @@ bool EventEngine::isPressed(Key key) {
 	return keys[key];
 }
 
-bool EventEngine::isPressed(Mouse btn) {
+bool EventEngine::isPressed(Mouse btn) { //Detect mouse click.
 	return buttons[btn];
 }
 
-bool EventEngine::wasPressed(Mouse btn) {
-	return buttons[btn];
-}
-
-bool EventEngine::isHovering(Mouse btn) {
-	return buttons[btn];
-}
-
-bool EventEngine::wasHovering(Mouse btn) {
+bool EventEngine::isHovering(Mouse btn) { //Detect mouse hover.
 	return buttons[btn];
 }
 

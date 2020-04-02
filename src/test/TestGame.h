@@ -19,9 +19,11 @@ class TestGame : public AbstractGame {
 
 		MazeGenerator * gen;
 
+		Button btn = Button(0,0,0,0,SDL_COLOR_WHITE, SDL_COLOR_WHITE, SDL_COLOR_WHITE);//
+
 		std::vector<std::shared_ptr<Line2i>> lines;
 		std::vector<std::shared_ptr<GameKey>> points;
-		std::shared_ptr<Button> button;
+		//std::shared_ptr<Button> button; //Link to Button class.
 
 		/* GAMEPLAY */
 		int score, keys, lives;

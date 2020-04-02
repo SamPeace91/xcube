@@ -1,5 +1,4 @@
 #include "TestGame.h"
-#include "C:\Users\skyro\Desktop\xcube\build/MenuUI.h"
 
 TestGame::TestGame() : AbstractGame(), score(0), lives(3), keys(5), gameWon(false), box(5, 5, 30, 30), light(0, 0, 150, 150) {
 	TTF_Font * font = ResourceManager::loadFont("res/fonts/arial.ttf", 72);
@@ -45,6 +44,7 @@ TestGame::TestGame() : AbstractGame(), score(0), lives(3), keys(5), gameWon(fals
 	}
 
 	keys = 5;
+	btn = Button(100, 100, 200, 100, SDL_COLOR_WHITE, SDL_COLOR_ORANGE, SDL_COLOR_RED);//
 }
 
 TestGame::~TestGame() {
@@ -104,7 +104,7 @@ void TestGame::update() {
 	if (keys == 0) {
 		gameWon = true;
 	}
-	button->handleEventUpdates;
+	btn.handleEventUpdates(eventSystem); //
 }
 
 void TestGame::render() {
@@ -128,8 +128,7 @@ void TestGame::renderUI() {
 	std::string scoreStr = std::to_string(score);
 	gfx->drawText(scoreStr, 780 - scoreStr.length() * 50, 25);
 
-	Button btn(100,100,200,100,SDL_COLOR_WHITE,SDL_COLOR_ORANGE,SDL_COLOR_RED);
-	btn.render(gfx);
+	btn.render(gfx); //Create and render button.
 
 	if (gameWon)
 		gfx->drawText("YOU WON", 250, 500);
